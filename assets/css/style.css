@@ -234,6 +234,15 @@
     color: #2C3333;
 }
 
+#projects .container .project .p8 a {
+    color: #F190B7;
+}
+
+#projects .container .project .p9 a {
+    color: #39AEA9;
+}
+
+
 #experience .title h2 {
     letter-spacing: 1px;
     color:#2666CF;
@@ -295,3 +304,13 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 } */
+
+
+@media screen and (max-width:1280px) {
+    #home .intros  h1 {
+        font-size: 22px;
+    }
+    #about .container .row .col-6 ul span {
+        position:relative;
+    }
+}
