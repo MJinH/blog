@@ -306,6 +306,30 @@
 } */
 
 
+.fade-top {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s, transform 2s;
+}
+
+.fade-bottom {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s, transform 2s;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.5s, transform 2s;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.5s, transform 2s;
+}
+
 @media screen and (max-width:1280px) {
     #home .intros  h1 {
         font-size: 22px;
