@@ -1,11 +1,17 @@
 function observe(entries) {
     for(entry of entries){
         if(entry.isIntersecting) {
-            entry.target.style.transform = "none"
-            entry.target.style.opacity = "1"
+            const name = entry.target.className
+            if(name !== "project") {
+                entry.target.style.transform = "none"
+                entry.target.style.opacity = "1"
+            }
         } else {
-            entry.target.style.opacity = "0"
+            const name = entry.target.className
             let direction = entry.target.getAttribute("data-direction")
+            if(name !== "project") {
+                entry.target.style.opacity = "0"
+            }
             if(direction==="right") {
                 entry.target.style.transform = "translateX(30px)"
             } else if(direction === "top") {
@@ -20,8 +26,10 @@ function observe(entries) {
 }
 
 
+let windowWidth = window.innerWidth;
+
 const intersectionObserver = new IntersectionObserver(observe, {
-    threshold: 0.3
+    threshold: windowWidth >= 1280 ? 0.3 : 0.1
 })
 
 
